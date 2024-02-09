@@ -1,9 +1,9 @@
 <script>
     export default{
         name: "YugiCard",
-        props: [
+        props: [ 
             propsElement
-        ],
+        ], // ERRORE QUA UNDEFINED
     }
 </script>
 
