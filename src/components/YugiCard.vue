@@ -1,13 +1,16 @@
 <script>
     export default{
-        name: "YugiCard"
+        name: "YugiCard",
+        props: [
+            propsElement
+        ],
     }
 </script>
 
 <template>
 
     <div id="card">
-        <h1>cadas</h1>
+        <h1>ds</h1>
     </div>
 
 </template>
