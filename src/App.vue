@@ -1,11 +1,23 @@
 <script>
 
+  import YugiHeader from './components/YugiHeader.vue'
+  import YugiMain from './components/YugiMain.vue'
+
+  export default{
+    components: {
+      YugiMain,
+      YugiHeader
+    }
+  }
 </script>
 
-<template>
-  <h1>cioa</h1>
+<template> 
+  <YugiHeader/>
+  <YugiMain/>
 </template>
 
-<style lang="sass">
-  
+<style lang="scss"> 
+  @use './styles/general.scss'
+
+
 </style>
