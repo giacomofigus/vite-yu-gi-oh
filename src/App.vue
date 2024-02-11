@@ -25,9 +25,12 @@
         axios
           .get(store.apiUrl) 
           .then(response => {
-            // console.log(response.data)
+            // console.log(response.data.data)
+            
+
 
             store.arrayCard = response.data.data
+            
 
             store.loading = false
           })
@@ -40,8 +43,8 @@
 </script>
 
 <template> 
-  <YugiHeader/>
-  <YugiMain/>
+    <YugiHeader/>
+    <YugiMain/>
 </template>
 
 <style lang="scss"> 

@@ -21,15 +21,13 @@
         <YugiCard 
         v-for="(element, index) in store.arrayCard"
         :key="index"
-        :propsElement="element" 
+        :propsElement="element"
+        
         />
     </div>
-    <!-- ERRORE QUA PROPSELEMENT UNDEFINED -->
     
 </template>
 
 <style lang="scss" scoped>
-    #containerCard{
-        padding: 10px;
-    }
+    
 </style>
