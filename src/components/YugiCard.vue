@@ -2,13 +2,15 @@
     export default{
         name: "YugiCard",
         props: [ 
-            "propsElement"
+            "propsElement",
+            
         ], 
     }
 </script>
 
 <template>
 
+    
     <div id="card" class="col-2 mx-3 my-2">
         <div class="border">
             <img :src="propsElement.card_images[0].image_url" alt="" class="w-100">

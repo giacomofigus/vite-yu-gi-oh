@@ -14,7 +14,8 @@
     
     data(){
       return{
-        store
+        store,
+        cardTotal: ""
       }
     },
     methods:{
@@ -27,17 +28,22 @@
           .then(response => {
             // console.log(response.data.data)
             
-
-
             store.arrayCard = response.data.data
-            
-
             store.loading = false
+
+            this.cardTotal = response.data.data.length
+            
           })
+      },
+      getArchetype(){
+        axios.get(store.ApiUrlArc).then((res) =>{
+          store.arrayArc = res.data
+        })
       }
     },
     mounted() {
       this.getCards()
+      this.getArchetype()
     }
   }
 </script>

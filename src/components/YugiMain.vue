@@ -1,12 +1,17 @@
 <script>
 
     import YugiList from '../components/YugiList.vue'
+    import {store} from "../store"
 
     export default{
         name: "YugiMain",
 
         components:{
             YugiList
+        },
+
+        data(){
+            return{store}
         }
     }
 </script>
@@ -15,8 +20,13 @@
     <main>
 
         <div class="container">
-            <select>
-                <option>Alien</option>
+            <select v-model="store.selectValue">
+                <option 
+                v-for="(element, index) in store.arrayArc"
+                :value="element.archetype_name"
+                >
+                    {{ element.archetype_name }}
+                </option>
             </select>
             
             <div id="container-card">
@@ -38,7 +48,7 @@
             }
 
             #container-card{
-                margin-top:50px;
+                margin-top:20px;
                 background-color: white;
                 padding: 10px;
             }

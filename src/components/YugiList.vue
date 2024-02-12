@@ -11,13 +11,17 @@
         data(){
             return{
                 store
+
+                
             }
         }
     }
 </script>
 
 <template>
-    <div id="containerCard" class="d-flex flex-wrap justify-content-center">
+    <div id="cardCounter" class="border p-2"> Found: {{ store.arrayCard.length }} cards</div>
+    <div id="containerCard" class="d-flex flex-wrap">
+        
         <YugiCard 
         v-for="(element, index) in store.arrayCard"
         :key="index"
@@ -29,5 +33,9 @@
 </template>
 
 <style lang="scss" scoped>
-    
+    #cardCounter{
+        background-color: #313131;
+        color: white;
+        font-weight: bold;
+    }
 </style>
