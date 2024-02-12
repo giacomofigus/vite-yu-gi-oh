@@ -28,6 +28,13 @@
                     {{ element.archetype_name }}
                 </option>
             </select>
+
+            <button 
+            class="ms-3 border p-1 px-2 bg-primary text-white"
+            @click.prevent="$emit('searchCard')"
+            >
+                Cerca
+            </button>
             
             <div id="container-card">
                 <YugiList/>

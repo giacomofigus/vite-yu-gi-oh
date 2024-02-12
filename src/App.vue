@@ -23,6 +23,8 @@
 
         store.loading = true
 
+        store.apiUrl += `&archetype=${store.selectValue}`
+
         axios
           .get(store.apiUrl) 
           .then(response => {
@@ -30,8 +32,6 @@
             
             store.arrayCard = response.data.data
             store.loading = false
-
-            this.cardTotal = response.data.data.length
             
           })
       },
@@ -50,7 +50,7 @@
 
 <template> 
     <YugiHeader/>
-    <YugiMain/>
+    <YugiMain @searchCard="getCards" />
 </template>
 
 <style lang="scss"> 
